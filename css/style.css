@@ -172,7 +172,7 @@ body{
     
 
 }
-h1
+.Welcome
 {
     font-family: 'Bolgart', sans-serif;
     font-size: 25px;
@@ -193,6 +193,55 @@ p{
     border: 3px solid black;
    
 }
+
+
+.Contact
+{
+    padding-top: 10px;
+    display: flex;   
+    flex-direction: column;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+.Location
+{
+    display: flex;
+    display: flex;   
+    flex-direction: column;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+
+}
+.Titles
+{
+    font-family: 'Bolgart', sans-serif;
+    color: white;
+    font-size: 30px;
+    
+}
+.ContactANDLocation
+{
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
