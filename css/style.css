@@ -36,19 +36,19 @@ html, body
     height: 100%;
 
 }
-@font-face 
-{
-    font-family: "Bolgart";
-    src: url(/fonts/Bolgart.ttf);
-    
-}
 
 @font-face 
 {
-    font-family: "Creato";
-    src: url(/fonts/Creato.otf);
-    
+    font-family: Bolgart;
+    src: url(/fonts/Bolgart.ttf);
 }
+ 
+ @font-face 
+ {
+    font-family: Creato;
+    src: url(/fonts/CreatoDisplay-Thin.otf);
+  
+ }
 
 /*End of reset CSS*/
 
@@ -61,81 +61,71 @@ html, body
     list-style: none;
     box-sizing: border-box;
  }
- .Navbar{
-
+ .Navbar
+ {
     background: #1B1B1B;
     height: 60px;
     width: 100%;
-    
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
  }
-
- nav ul{
-    float:left;
-
-
-
- }
- nav ul li{
-   display: inline-block;
-   padding-top: 5%;
-   margin: 0 20px;
-   
-   
-   
- }
+ 
  nav ul li a
  {
     color: #ffffff;
     text-transform: capitalize;
-    font-family: 'Bolgart', sans-serif;
-    padding: 7px 13px;
+    font-family: 'Bolgart', 'sans-serif';
+    size: bold;
+    padding: 3px 10px;
     border-radius: 3%;
     
-
- }
- .navlinks:hover{
-
-    background-color: green;
-    transform: 10s;
 }
 
-.logo{
-    margin-left: 25.5%;
-    margin-top: 0.2%;
+.navlinks
+{
+    
+    float: right;
+    
 }
-.logo:hover{
+
+.navlinks.text
+{
+    margin-right: 50px;
+    padding: 50px;
+    border-radius: 30%;
+}
+
+.navlinks.logo
+{
+position: absolute;
+left: 0;
+top: 0;
+}
+
+
+.icon:hover
+{
     background-color: green;
     transform: 10s;
     border-radius: 10%;
 }
 
- 
- .icon{
-    float:right;
-    margin-right: 2%;
-    margin-top: 0.5%;
-
- 
-}
-.icon:hover{
+.logo:hover
+{
     background-color: green;
     transform: 10s;
     border-radius: 10%;
 }
-@media screen and (max-width:480px) 
- {
-    .icon 
-    {
-        display: block;
-    }
- } 
- @media screen and (max-width:480px) 
- {
-    .logo 
-    {
-        display: block;
-    }
- } 
+
+ .navlinks:hover
+{
+    background-color: green;
+    transform: 10s;
+}
+
 
 /*--------------------END OF NAVIGATION BAR--------------------*/
 
@@ -146,54 +136,65 @@ html, body
 
 
 
-/*--------------------START OF BODY BAR--------------------*/
+
+
+
+
+
+
+
+
+/*--------------------START OF BODY--------------------*/
 body{
     background-color: #2F2F2F;
 }
 
 .container{
     display: grid;
-    gap: 1rem;
-    margin-top: 10%;
-    margin-left: 35%;
+    gap: 2rem;
+    margin-top: 5%;
+    margin-left: 25%;
     margin-right: 50%;
 }
 #template{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
 }
 .container2{
     display: grid;
     gap: 1rem;
-    margin-top: -25%;
-    margin-left: 52%;
+    margin-top: -33%;
+    margin-left: 55%;
     margin-right: 50%;
     height: 345px;
     width: 240px;
+
+    
+
+}
+h1
+{
+    font-family: 'Bolgart', sans-serif;
+    font-size: 25px;
+    background-color: #1B1B1B;
+    color: white; 
+    border: 3px solid black;
+    padding-left: 60px;
+    padding-bottom: 5px;
+
+}
+
+p{
+    font-family: 'Creato', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
     background-color: #1B1B1B;
     color: white; 
     border: 3px solid black;
    
-    
-
-}
-h1{
-    font-family: 'Creato', sans-serif;
-    font-weight: 1000;
-    font-size: x-large;
-
-    text-indent: 70px;
-}
-p{
-    font-family: 'Creato', sans-serif;
-    font-weight: 400;
-    font-size: large;
-    
 }
 
 
 
 
-
-/*--------------------END OF NAVIGATION BAR--------------------*/
-    
+/*--------------------END OF THE BODY--------------------*/
