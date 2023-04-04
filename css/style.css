@@ -1,0 +1,320 @@
+/*Start of reset CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+html, body
+{
+    margin: 0;
+    height: 100%;
+
+}
+
+@font-face 
+{
+    font-family: Bolgart;
+    src: url(/fonts/Bolgart.ttf);
+}
+ 
+ @font-face 
+ {
+    font-family: Creato;
+    src: url(/fonts/CreatoDisplay-Thin.otf);
+  
+ }
+
+/*End of reset CSS*/
+
+
+
+/*--------------------START OF NAVIGATION BAR--------------------*/
+
+*{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+ }
+ .navbar
+ {
+    background: #1B1B1B;
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ }
+ 
+ul li a
+ {
+    color: #ffffff;
+    text-transform: capitalize;
+    font-family: 'Bolgart', 'sans-serif';
+    size: bold;
+    padding: 3px 10px;
+    border-radius: 3%;
+    
+}
+
+.navlinks
+{
+    
+    float: right;
+    
+}
+
+.navlinks.text
+{
+    margin-right: 50px;
+    padding: 50px;
+    border-radius: 30%;
+}
+
+.navlinks.logo
+{
+position: absolute;
+left: 0;
+top: 0;
+}
+
+
+.icon:hover
+{
+    background-color: green;
+    transform: 10s;
+    border-radius: 10%;
+}
+
+.logo:hover
+{
+    background-color: green;
+    transform: 10s;
+    border-radius: 10%;
+}
+
+ .navlinks:hover
+{
+    background-color: green;
+    transform: 10s;
+}
+
+.dropdown .navbar.Icon
+{
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #1B1B1B;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a
+{
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.navbar a:hover, .dropdown:hover .Icon
+{
+
+
+    background-color: green;
+}
+.dropdown-content a:hover
+{
+    background-color: green;
+}
+.dropdown:hover .dropdown-content
+{
+
+    display: block;
+}
+
+
+/*--------------------END OF NAVIGATION BAR--------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------START OF BODY--------------------*/
+body{
+    background-color: #2F2F2F;
+}
+
+.container{
+    display: grid;
+    gap: 2rem;
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 50%;
+}
+#template{
+    max-width: 300px;
+    max-height: 300px;
+}
+.container2{
+    display: grid;
+    gap: 1rem;
+    margin-top: -33%;
+    margin-left: 55%;
+    margin-right: 50%;
+    height: 345px;
+    width: 240px;
+
+    
+
+}
+.Welcome
+{
+    font-family: 'Bolgart', sans-serif;
+    font-size: 25px;
+    background-color: #1B1B1B;
+    color: white; 
+    border: 3px solid black;
+    padding-left: 60px;
+    padding-bottom: 5px;
+
+}
+
+p{
+    font-family: 'Creato', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    background-color: #1B1B1B;
+    color: white; 
+    border: 3px solid black;
+   
+}
+
+
+.Contact
+{
+    padding-top: 10px;
+    display: flex;   
+    flex-direction: column;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+.Location
+{
+    display: flex;
+    display: flex;   
+    flex-direction: column;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+
+}
+.Titles
+{
+    font-family: 'Bolgart', sans-serif;
+    color: white;
+    font-size: 30px;
+    
+}
+.ContactANDLocation
+{
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+
+.ForumBox
+{
+
+
+
+    
+    background-color: #0c0c0c;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    font-family: sans-serif;
+    font-size: 20px;
+
+}
+.ForumTitle
+{
+    font-size: 50px;
+    margin-bottom: 10%;
+
+}
+.test2
+{
+color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------END OF THE BODY--------------------*/
