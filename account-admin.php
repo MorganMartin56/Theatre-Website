@@ -27,7 +27,8 @@ $conn->close();?>
 
 
 <!--Account Information-->
-<div class="ForumBox">
+
+<div class="ForumBoxAdmin">
 <h1 class="ForumTitle">Update Account</h1>
 <form action="UpdateUser.php" method="post">
     <label for="username">Username:</label>
@@ -44,11 +45,10 @@ $conn->close();?>
     <br> </br>
     <input type="submit" class="SubmitB" value="update">
 </form>
+<div class="AdminBox">
+<h1 class="ForumTitle">Admin Panel</h1>
+
 </div>
-
-
-
-
 
 
 

@@ -1,20 +1,31 @@
-<!-- PHP Link to head template -->
-<?php require('php/head.php');?>
+<?php require('header/head.php');?>
+       <!-- Containers for body content  -->
+<main>
+        <div class="container">
+            <div class="inner-container">
+                <h1 class="indextitle">Welcome</h1>
+                <p class="paragraph">Our movie theatre website forum is a vibrant community where movie fans can come
+                    together
+                    to share their passion for cinema. Whether you're looking to connect with like-minded individuals,
+                    learn
+                    more about your favorite films, or discover new cinematic gems, our forum is the perfect place to do
+                    it.
+                    We
+                    pride ourselves on fostering a welcoming and inclusive environment where everyone can feel
+                    comfortable
+                    expressing their opinions and engaging in thoughtful discussions. So why not join us and become a
+                    part
+                    of
+                    the conversation?</p>
+                <div class="images">
+                    <img src="images/camera.png" alt="Camera Image" class="cam-image">
+                    <img src="images/theatre.jpg" alt="Image of a threatre" class="theatre-image">
+                </div>
+            </div>
 
-
-    <div class="container">
-      <div class ="test1"><img src="images/template.png" id="template"> </div>
-      <div class ="test2"><img src="images/template.png" id="template"></div>
-      </div>
-      <div class ="container2">
-        <H1 class="Welcome">Welcome</H1>
-        <br></br>
-        <p>To our movie site! We are excited to offer you a vast selection of movies for your viewing pleasure. Our collection includes the latest blockbusters, all-time classics, and hidden gems that you may have missed. Whether you are in the mood for an action-packed adventure, a heartwarming romance, or a spine-tingling thriller, we have something for everyone. We hope you enjoy your stay!</p>
-        </p>
-      </div>
-      </div>
-
-
+        </div>
+    </main>
 
 </body>
+
 </html>
