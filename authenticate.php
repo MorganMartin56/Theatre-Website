@@ -1,78 +1,38 @@
-<?php require('php/head.php');?>
+<!-- PHP Link to head and database template -->
+<?php require('header/head.php');?>
+<?php require ('db-access.php');
 
-
-<?php
-
-// require 'db-access.php';
-
-// $username = $_POST['username'];
-// $password = $_POST['password'];
-
-// $sql = "SELECT user_id, username, password FROM users
-// WHERE username = '$username'";
-
-// $result = $conn->query($sql);
-
-// if($result->num_rows == 1) {
-
-// $row = $result->fetch_assoc();
-
-//     if(password_verify($password, $row['password'])){
-//         echo "Welcome " . $row['username'];
-//         echo "You have logged in successfully";
-
-
-//         $_SESSION['loggedin'] = true;
-//         $_SESSION['customer_no'] = $row['customer_no'];
-// }
-// else
-// {
-
-// echo "Password not correct";
-
-// }
-// }
-// else
-// {
-// echo "Your Username and password is incorrect";
-// }
-
-// $conn->close();
-?>
-
-
-<?php
-
-require "db-access.php";
-
+// authenticate user information on login
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT user_id, username, password FROM users
-        WHERE username = '$username'";
 
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT user_id, username, password FROM users WHERE username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows == 1) {
 
     $row = $result->fetch_assoc();
-
-    if ($row['password']){
+    
+//verify password
+if (password_verify($password, $row['password'])){
         echo "Hi " . $row['username'];
         echo "<br>You have successfully logged in.";
 
         $_SESSION['loggedin'] = true;
         $_SESSION['user_id'] = $row['user_id'];
     } 
-    else {
-        echo "Password not recognised";
-    }
+    //error handling
+else 
+{
+        echo "Password not recognised"; }
 } 
-else {
+else 
+{
     echo "Your username or password is incorrect";
 }
 
-$conn->close();
-
-?>
+$conn->close();?>
 
