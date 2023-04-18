@@ -5,7 +5,6 @@
 <!-- PHP Link DB -->
 <?php require('db-access.php');
 
-
 //This finds the user with user_id
 $user_id = $_SESSION['user_id'];
 $sql = "SELECT * FROM users WHERE user_id = $user_id";
@@ -21,14 +20,12 @@ else
 {
     echo "unable to retrieve user details";
 }
-
-$conn->close();?>
-
+?>
 
 
+<div class=ForumContainerAdmin> 
 <!--Account Information-->
-
-<div class="ForumBoxAdmin">
+<div class="ForumBox">
 <h1 class="ForumTitle">Update Account</h1>
 <form action="UpdateUser.php" method="post">
     <label for="username">Username:</label>
@@ -45,16 +42,55 @@ $conn->close();?>
     <br> </br>
     <input type="submit" class="SubmitB" value="update">
 </form>
-<div class="AdminBox">
-<h1 class="ForumTitle">Admin Panel</h1>
-
 </div>
 
 
+<div class="AdminBox">
+<h1 class="PanelTitle">Admin Panel</h1>
+<div class="UserList">
 
+<?php
 
+//This finds the user with user_id
+if (isset($_GET['Find']))
+{
+$Search = $_GET['Find'];
+$sql = "SELECT * FROM users WHERE user_id";
+}
+else
+{
+   $sql = "SELECT * FROM users";
+}
 
+$result = $conn->query($sql);
 
+if($result->num_rows > 0)
+{
+while ($row = $result->fetch_assoc())
+{
+   echo "<a class=\"names\" href=\"\">" .$row['username']. "</a>";
+}
+}
+//error handling
+else
+{
+      echo "<h1 class=\"results\">0 results were found<h1>";
+}
+
+$conn->close();
+?>
+</div>
+<div class="UserOptions">
+<button class="SuspendUser">Suspend User</button>
+<button class="PromoteUser">Promote User</button>
+</div>
+<div class="ForumOptions">
+<button class="CreatePost">Create Post</button>
+<button class="ModifyPost">Modify Post</button>
+<button class="DeletePost">Delete Post</button>
+</div>
+</div>
+</div>
 
 
 

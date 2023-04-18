@@ -2,6 +2,8 @@
 <?php require('header/head.php');?>
 <!-- PHP checks for login -->
 <?php require('checklogin.php')?>
+<!-- PHP checks for admin -->
+<?php require('check-admin.php')?>
 <!-- PHP Link DB -->
 <?php require('db-access.php');
 
