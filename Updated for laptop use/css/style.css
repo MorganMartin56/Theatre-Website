@@ -1,0 +1,759 @@
+/*Start of reset CSS*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,
+ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,
+
+video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
+
+section 
+{
+    display: block;
+}
+body 
+{
+    line-height: 1;
+}
+
+ol,
+ul 
+{
+    list-style: none;
+}
+
+html,
+body 
+{
+    margin: 0;
+    height: 100%;
+
+}
+
+@font-face 
+{
+    font-family: Bolgart;
+    src: url(/fonts/Bolgart.ttf);
+}
+
+@font-face 
+{
+    font-family: Creato;
+    src: url(/fonts/CreatoDisplay-Thin.otf);
+
+}
+
+/*End of reset CSS*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------START OF NAVIGATION BAR--------------------*/
+
+* 
+{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Base navbar styles */
+.navbar 
+{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+/* sets the navbar colour and adds a transition to make the theme switcher better to use */
+.navbar-bg 
+{
+    background-color: #1b1b1b;
+    transition: all 0.5s linear;
+}
+
+.flex-row 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/* sets inner nav to flex to allow for mobile nav viewing */
+.inner-nav 
+{
+    display: flex;
+}
+
+/* sets the height of each nav item to 50 pixels */
+.nav-item 
+{
+    height: 50px;
+}
+
+/*Styles each link */
+.nav-link 
+{
+    padding:  20px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Bolgart', sans-serif;
+}
+
+
+.nav-icon 
+{
+    margin-bottom: 7px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*after each item in the navbar is a border bottom that that has a transition */
+.nav-item::after 
+{
+    content: "";
+    display: block;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    border-bottom: 3px solid #fff;
+}
+
+/*the border then scales making it viewable on hover */
+.nav-item:hover::after 
+{
+    transform: scaleX(1);
+}
+
+/*Sets the styles for the dropdown button when on mobile view and makes dropdown button not display automatically*/
+.dropdown-btn 
+{
+    margin-left: auto;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    margin-right: 10px;
+    display: none;
+}
+
+/*When the inner nav has the active class apply these styles*/
+.inner-nav.active 
+{
+    display: flex;
+    opacity: 1;
+    transition: all .5s ease-in;
+    z-index: 9999;
+}
+
+
+@media (max-width: 1080px) 
+{
+    .flex-row 
+    {
+        width: 100%;
+    }
+
+    .navbar 
+    {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-link 
+    {
+        font-size: 25px;
+    }
+
+    .nav-icon 
+    {
+        font-size: 25px;
+    }
+
+    /* remove the border under each nav item otherwise it will look horrible */
+    .nav-item::after 
+    {
+        display: none;
+    }
+
+    /* remove the border under the nav home otherwise it will look horrible */
+    .nav-home::after 
+    {
+        display: none;
+    }
+
+    .dropdown-btn 
+    {
+        display: block !important;
+    }
+
+    .inner-nav 
+    {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        opacity: 0;
+    }
+
+    .show 
+    {
+        width: 100vw;
+        position: static !important;
+    }
+
+    .nav-icon 
+    {
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 767px) 
+{
+    .inner-nav 
+    {
+        justify-content: flex-end;
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* center the content of the navbar to the center */
+    .navbar 
+    {
+        justify-content: center;
+    }
+
+    /* change container size*/
+    .container 
+    {
+        width: 350px !important;
+    }
+
+    .images 
+    {
+        width: auto !important;
+    }
+
+}
+
+.dropdown-menu 
+{
+    height: 0px;
+    position: absolute;
+    background-color: #1b1b1b;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.show 
+{
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 70px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 225px;
+    transition: all 0.5s ease-in;
+}
+
+.dropdown-text 
+{
+    font-size: 20px !important;
+}
+
+
+/*--------------------END OF NAVIGATION BAR--------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------START OF BODY--------------------*/
+body 
+{
+    background-color: #2F2F2F;
+    overflow: hidden;
+}
+
+.container 
+{
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.inner-container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.paragraph 
+{
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 10px;
+
+}
+
+.indextitle 
+{
+    font-size: 50px;
+}
+
+.cam-image 
+{
+    max-width: 200px;
+    max-height: 200px;
+    float: right;
+}
+
+.theatre-image 
+{
+    max-width: 200px;
+    max-height: 200px;
+    float: right;
+}
+
+.Welcome 
+{
+    font-family: 'Bolgart', sans-serif;
+    font-size: 25px;
+    background-color: #1B1B1B;
+    color: white;
+    border: 3px solid black;
+    padding-left: 60px;
+    padding-bottom: 5px;
+
+}
+
+.images 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+p 
+{
+    font-family: 'Creato', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+}
+
+
+.Contact 
+{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+
+.Location 
+{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.Titles
+ {
+    font-family: 'Bolgart', sans-serif;
+    color: white;
+    font-size: 30px;
+
+}
+
+.ContactANDLocation 
+{
+    vertical-align: top;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+/*--------------------Account Page--------------------*/
+
+.ForumBox
+{
+
+    background-color: #0c0c0c;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 20px;
+
+}
+
+.ForumTitle 
+{
+    font-size: 50px;
+    margin-bottom: 10%;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+input 
+{
+    accent-color: black;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+/*--------------------Account Admin Page--------------------*/
+.ForumBoxAdmin
+{
+
+    background-color: #0c0c0c;
+    color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 20px;
+
+}
+
+.ForumTitleAdmin 
+{
+    font-size: 50px;
+    margin-bottom: 10%;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+
+.ForumContainerAdmin
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    background-color: #0c0c0c;
+}
+.ForumBoxAdmin 
+{
+
+
+    color: #0c0c0c;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 20px;
+ 
+
+}
+
+.PanelTitle
+{
+    font-family: 'Bolgart', sans-serif;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+.AdminBox 
+{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: #0c0c0c;
+    margin-right: 50px;
+
+
+}
+.UserList
+{
+
+    text-align: center;
+    justify-content: center;
+    background-color: #3a3a3a;
+    width: 98%;
+    height: 30%;
+
+
+}
+
+.names
+{
+    text-decoration: none;
+    color: White;
+    font-size: 20px;
+    margin: 15px;
+    font-family: 'bolgart';
+
+}
+
+.UserOptions
+{
+display: flex;
+width: 98%;
+justify-content: space-between;
+
+}
+.SuspendUser
+{
+    margin-left:10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.PromoteUser
+{
+    margin-right:10px;
+   padding: 20px;
+   margin-top: 20px;
+   color: white;
+   background-color: #3a3a3a;
+}
+
+.ForumOptions
+{
+    display: flex;
+    width: 100%;
+    margin-top: 150px;
+    justify-content: space-between;
+    overflow: none;
+}
+
+.CreatePost
+{
+    margin-left:10px;
+    padding: 50px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.ModifyPost
+{
+    padding: 50px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.DeletePost
+{
+    margin-right:10px;
+    padding: 50px;
+    color: white;
+    background-color: #3a3a3a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*This is the forum.php title styling*/
+.fTitle 
+{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+.ForumArea 
+{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1%;
+    border: 10px solid #141414;
+}
+
+.card 
+{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: 20%;
+
+}
+
+.ForumIcon 
+{
+    display: flex;
+    margin-right: 92%;
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
+
+}
+
+.cardtitle 
+{
+    display: flex;
+    position: absolute;
+    margin-top: 0.7%;
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+
+
+}
+
+
+.searchbar 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.results 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    color: white;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+
+@media only screen and (max-width: 1280px)
+ {
+    .container 
+    {
+        width: 600px;
+    }
+}
+
+@media (max-width: 300px) 
+{
+    .container 
+    {
+        width: 250px !important;
+    }
+
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 1000px)
+ {
+    .cardtitle
+    {
+        font-size:20px;
+    }
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 700px)
+ {
+    .cardtitle
+    {
+        font-size:10px;
+    }
+}
+
+
+
+
+/*Forum Title font sizing*/
+@media only screen and (max-width: 1000px)
+ {
+    .card
+    {
+        height: 30%;
+    }
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 700px)
+ {
+    .card
+    {
+        height: 100%;
+        border: 2px  #141414;
+    }
+}
+
+
+
+/*--------------------END OF THE BODY--------------------*/
