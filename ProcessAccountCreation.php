@@ -28,16 +28,15 @@ $stmt->execute();
 $result = $stmt->get_result();
 if ($result->num_rows > 0)
 {
-        echo "<h1 class=\"results\">Username is already taken<a href='create account.php'>Go Back</a></h1></br>";
+        echo "<h1 class=\"results\">Username is already taken<br><a class=\"GoBack\" href='create account.php'>Go Back</a></br></h1>";
         $isValid = false;
 }
 
 //Creates a new user
 if($isValid == true)
 {
-
+//hashes password and sends to database
 $hash = password_hash($password, PASSWORD_DEFAULT);
-        //PREPARED STATEMENT
 $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
 
 //bind parameters
@@ -47,12 +46,12 @@ $stmt->bind_param("sss", $username, $email, $hash);
 if($stmt->execute() == true)
 {
         $lastId = $stmt->insert_id;     
-        echo "<h1 class=\"results\">New User created successfully <br>$lastId</br> </h1>";
+        echo "<h1 class=\"results\">New User created successfully</div> ";
 }
 
 //error handling
 else
 {
-        echo "<h1>Invalid User information was not inputted please try again</h1>";
+        echo "<h1 class=\"results\">Invalid User information was not inputted please try again</h1>";
 }}
 $conn->close();?>

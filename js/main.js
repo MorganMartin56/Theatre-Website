@@ -1,28 +1,32 @@
+// Show dropdown menu
 function showDropdown() {
     document.getElementById("dropdown").classList.toggle("show");
-}
-
-//get both the dropdown button and the nav ids
-const navMobileButton = document.getElementById('dropdown-btn');
-const mobileNav = document.getElementById('mobile-nav');
-
-/* add a click event listener so that when you click on the 
-button it will toggle the activate class which allows for the mobile nav to work */
-navMobileButton.addEventListener('click', () => {
+  }
+  
+  // Get both the dropdown button and the nav ids
+  const navMobileButton = document.getElementById('dropdown-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  
+  // Add a click event listener to toggle the mobile nav
+  navMobileButton.addEventListener('click', () => {
     mobileNav.classList.toggle('active');
-})
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function (event) {
-    if (!event.target.matches('.nav-icon')) {
-
-        var dropdowns = document.getElementsByClassName("dropdown-menu");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+  });
+  
+  // Close the dropdown if the user clicks outside of it
+  window.addEventListener('click', (event) => {
+    const dropdownMenu = document.getElementById('dropdown');
+    if (!event.target.matches('.nav-icon') && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.remove('show');
     }
-}
+  });
+  
+  // onclick event
+  function Rsure() {
+    alert("Are you sure?");
+  }
+  
+  // onChange event
+  function CheckValue(value) {
+    alert("Is this the right value: " + value);
+  }
+  

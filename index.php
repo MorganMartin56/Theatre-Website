@@ -4,6 +4,7 @@
         <div class="container">
             <div class="inner-container">
                 <h1 class="indextitle">Welcome</h1>
+                <br></br><br></br>
                 <p class="paragraph">Our movie theatre website forum is a vibrant community where movie fans can come
                     together
                     to share their passion for cinema. Whether you're looking to connect with like-minded individuals,

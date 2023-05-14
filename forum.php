@@ -27,7 +27,6 @@ else
 
 //This is the code that displays the forum posts
 $result = $conn->query($sql);
-
 if($result->num_rows > 0)
 {
 while ($row = $result->fetch_assoc())
@@ -35,19 +34,18 @@ while ($row = $result->fetch_assoc())
 
    echo "<div class=\"ForumArea\">";
    echo "<div class=\"card\">";
-   echo  "<a href=\"\">";
-   echo "<a class=\"cardtitle\" href=\"\">" .$row['post_title']."</a>";
-   echo "<img src=\"images/Forum Icon.png\" href=\"\" class=\"ForumIcon\" alt=\"Forum Image\">";
-   echo "</a>";
+   echo  "<a href=\"ForumDetail.php?post_id=".$row['post_id']."\"></a>";
+   echo "<a class=\"cardtitle\" href=\"ForumDetail.php?post_id=".$row['post_id']."\">" .$row['post_title']."</a>";
+   echo "<a href=\"ForumDetail.php?post_id=".$row['post_id']."\"><img src=\"images/Forum Icon.png\" class=\"ForumIcon\" alt=\"Forum Image\"></a>";
    echo "</div>";
    echo "</div>";
-    
+
 }
 }
 //error handling
 else
 {
-      echo "<h1 class=\"results\">0 results were found<h1>";
+      echo "<h1 class=\"results\">0 Forums were found?<h1>";
 }
 
 $conn->close();

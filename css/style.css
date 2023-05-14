@@ -1,9 +1,5 @@
 /*Start of reset CSS*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,
-ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,
-
-video 
-{
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd, ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -11,71 +7,39 @@ video
     font: inherit;
     vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
-
-section 
-{
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav, section {
     display: block;
 }
-body 
-{
+body {
     line-height: 1;
 }
-
-ol,
-ul 
-{
+ol, ul {
     list-style: none;
 }
-
-html,
-body 
-{
+html, body {
     margin: 0;
+    padding: 0;
     height: 100%;
-
 }
-
-@font-face 
-{
-    font-family: Bolgart;
-    src: url(/fonts/Bolgart.ttf);
-}
-
-@font-face 
-{
-    font-family: Creato;
-    src: url(/fonts/CreatoDisplay-Thin.otf);
-
-}
-
-/*End of reset CSS*/
-
-
-
-
-
-
-
-
-
-
-
-
-/*--------------------START OF NAVIGATION BAR--------------------*/
-
-* 
-{
+* {
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: Bolgart;
+    src: url(/fonts/Bolgart.ttf);
+}
+@font-face {
+    font-family: Creato;
+    src: url(/fonts/CreatoDisplay-Thin.otf);
+}
+/*End of reset CSS*/
+/*--------------------START OF NAVIGATION BAR--------------------*/
 
 /* Base navbar styles */
-.navbar 
-{
+.navbar {
     background-color: transparent;
     width: 100%;
     display: flex;
@@ -88,74 +52,60 @@ body
     right: 0;
     left: 0;
 }
-
 /* sets the navbar colour and adds a transition to make the theme switcher better to use */
-.navbar-bg 
-{
+.navbar-bg {
     background-color: #1b1b1b;
     transition: all 0.5s linear;
+    width: 100%;
 }
-
-.flex-row 
-{
+.flex-row {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
-
 /* sets inner nav to flex to allow for mobile nav viewing */
-.inner-nav 
-{
+.inner-nav {
     display: flex;
 }
-
 /* sets the height of each nav item to 50 pixels */
-.nav-item 
-{
+.nav-item {
     height: 50px;
 }
-
 /*Styles each link */
-.nav-link 
-{
-    padding:  20px;
+.nav-link {
+    padding: 20px;
     display: block;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
     font-family: 'Bolgart', sans-serif;
 }
-
-
-.nav-icon 
-{
+.nav-icon {
     margin-bottom: 7px;
     display: block;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
-
+.navlinkslogo {
+    margin-top:4px;
+    
+}
 /*after each item in the navbar is a border bottom that that has a transition */
-.nav-item::after 
-{
+.nav-item::after {
     content: "";
     display: block;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     border-bottom: 3px solid #fff;
 }
-
 /*the border then scales making it viewable on hover */
-.nav-item:hover::after 
-{
+.nav-item:hover::after {
     transform: scaleX(1);
 }
-
 /*Sets the styles for the dropdown button when on mobile view and makes dropdown button not display automatically*/
-.dropdown-btn 
-{
+.dropdown-btn {
     margin-left: auto;
     border: 0;
     background-color: transparent;
@@ -163,207 +113,150 @@ body
     margin-right: 10px;
     display: none;
 }
-
 /*When the inner nav has the active class apply these styles*/
-.inner-nav.active 
-{
+.inner-nav.active {
     display: flex;
     opacity: 1;
     transition: all .5s ease-in;
     z-index: 9999;
 }
-
-
-@media (max-width: 1080px) 
-{
-    .flex-row 
-    {
+@media (max-width: 1080px) {
+    .flex-row {
         width: 100%;
-    }
-
-    .navbar 
-    {
+   }
+    .navbar {
         flex-direction: column;
         height: auto;
-    }
-
-    .nav-link 
-    {
+   }
+    .nav-link {
         font-size: 25px;
-    }
-
-    .nav-icon 
-    {
+   }
+    .nav-icon {
         font-size: 25px;
-    }
-
-    /* remove the border under each nav item otherwise it will look horrible */
-    .nav-item::after 
-    {
+   }
+   /* remove the border under each nav item otherwise it will look horrible */
+    .nav-item::after {
         display: none;
-    }
-
-    /* remove the border under the nav home otherwise it will look horrible */
-    .nav-home::after 
-    {
+   }
+   /* remove the border under the nav home otherwise it will look horrible */
+    .nav-home::after {
         display: none;
-    }
-
-    .dropdown-btn 
-    {
+   }
+    .dropdown-btn {
         display: block !important;
-    }
-
-    .inner-nav 
-    {
+   }
+    .inner-nav {
         flex-direction: column;
         align-items: center;
         display: none;
         opacity: 0;
-    }
-
-    .show 
-    {
+   }
+    .show {
         width: 100vw;
         position: static !important;
-    }
-
-    .nav-icon 
-    {
+   }
+    .nav-icon {
         min-width: 40px;
         min-height: 40px;
-    }
-
+   }
 }
-
-@media only screen and (max-width: 767px) 
-{
-    .inner-nav 
-    {
+@media only screen and (max-width: 767px) {
+    .inner-nav {
         justify-content: flex-end;
         flex-basis: 100%;
         flex-grow: 1;
         align-items: center;
         flex-direction: column;
-    }
-
-    /* center the content of the navbar to the center */
-    .navbar 
-    {
+   }
+   /* center the content of the navbar to the center */
+    .navbar {
         justify-content: center;
-    }
-
-    /* change container size*/
-    .container 
-    {
+        box-sizing: border-box;
+   }
+   /* change container size*/
+    .container {
         width: 350px !important;
-    }
-
-    .images 
-    {
+   }
+    .images {
         width: auto !important;
-    }
-
+   }
 }
-
-.dropdown-menu 
-{
+.dropdown-menu {
     height: 0px;
     position: absolute;
     background-color: #1b1b1b;
     overflow: hidden;
-    z-index: 1;
 }
-
-.show 
-{
+.show {
     display: flex;
     flex-direction: column;
     right: 0;
-    top: 70px;
+    top: 60px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    height: 225px;
+    height: 200px;
     transition: all 0.5s ease-in;
 }
-
-.dropdown-text 
-{
+.dropdown-text {
     font-size: 20px !important;
 }
-
-
 /*--------------------END OF NAVIGATION BAR--------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*--------------------START OF BODY--------------------*/
-body 
-{
+body {
     background-color: #2F2F2F;
-    overflow: hidden;
 }
-
-.container 
-{
+.container {
     display: flex;
     width: 1440px;
     margin: 0 auto;
     color: #fff;
 }
-
-.inner-container 
-{
+.inner-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
 }
-
-.paragraph 
-{
+.LocationImage {
+    min-width: 500px;
+    max-height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+    .LocationImage {
+        min-width: 200px;
+        max-height: 100px;
+   }
+    @media screen and (max-width: 350px) {
+        .LocationImage {
+            min-width: 120px;
+            max-height: 110px;
+       }
+   }
+}
+.paragraph {
     font-size: 20px;
     width: 50%;
     margin-bottom: 10px;
-
 }
-
-.indextitle 
-{
+.indextitle {
     font-size: 50px;
 }
-
-.cam-image 
-{
+.cam-image {
     max-width: 200px;
     max-height: 200px;
     float: right;
 }
-
-.theatre-image 
-{
+.theatre-image {
     max-width: 200px;
     max-height: 200px;
     float: right;
 }
-
-.Welcome 
-{
+.Welcome {
     font-family: 'Bolgart', sans-serif;
     font-size: 25px;
     background-color: #1B1B1B;
@@ -371,28 +264,20 @@ body
     border: 3px solid black;
     padding-left: 60px;
     padding-bottom: 5px;
-
 }
-
-.images 
-{
+.images {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
 }
-
-p 
-{
+p {
     font-family: 'Creato', sans-serif;
     font-weight: 400;
     font-size: 25px;
     color: white;
 }
-
-
-.Contact 
-{
+.Contact {
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -400,40 +285,26 @@ p
     text-align: center;
     justify-content: center;
 }
-
-.Location 
-{
+.Location {
     display: flex;
     display: flex;
     flex-direction: column;
     vertical-align: top;
     text-align: center;
     justify-content: center;
-
 }
-
-.Titles
- {
+.Titles {
     font-family: 'Bolgart', sans-serif;
     color: white;
     font-size: 30px;
-
 }
-
-.ContactANDLocation 
-{
+.ContactANDLocation {
     vertical-align: top;
     text-align: center;
     justify-content: center;
 }
 
-
-
-/*--------------------Account Page--------------------*/
-
-.ForumBox
-{
-
+.ForumBox {
     background-color: #0c0c0c;
     color: white;
     width: 100%;
@@ -445,30 +316,22 @@ p
     text-align: left;
     font-family: sans-serif;
     font-size: 20px;
-
 }
-
-.ForumTitle 
-{
+.ForumTitle {
     font-size: 50px;
     margin-bottom: 10%;
     font-family: sans-serif;
     font-size: 50px;
 }
-
-input 
-{
+input {
     accent-color: black;
     background-color: black;
     color: white;
     font-size: 15px;
     padding-bottom: 5px;
 }
-
 /*--------------------Account Admin Page--------------------*/
-.ForumBoxAdmin
-{
-
+.ForumBoxAdmin {
     background-color: #0c0c0c;
     color: white;
     width: 50%;
@@ -480,30 +343,21 @@ input
     text-align: left;
     font-family: sans-serif;
     font-size: 20px;
-
 }
-
-.ForumTitleAdmin 
-{
+.ForumTitleAdmin {
     font-size: 50px;
     margin-bottom: 10%;
     font-family: sans-serif;
     font-size: 50px;
 }
-
-
-.ForumContainerAdmin
-{
+.ForumContainerAdmin {
     display: flex;
     width: 100%;
     height: 100%;
     justify-content: space-between;
     background-color: #0c0c0c;
 }
-.ForumBoxAdmin 
-{
-
-
+.ForumBoxAdmin {
     color: #0c0c0c;
     width: 100%;
     height: 100%;
@@ -511,124 +365,189 @@ input
     text-align: left;
     font-family: sans-serif;
     font-size: 20px;
- 
-
 }
-
-.PanelTitle
-{
+.PanelTitle {
     font-family: 'Bolgart', sans-serif;
     color: white;
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
-
 }
-.AdminBox 
-{
+.AdminBox {
     width: 50%;
     height: 100%;
     text-align: center;
     justify-content: center;
     background-color: #0c0c0c;
     margin-right: 50px;
-
-
 }
-.UserList
-{
-
+.UserList {
     text-align: center;
     justify-content: center;
     background-color: #3a3a3a;
     width: 98%;
     height: 30%;
-
-
 }
-
-.names
-{
+.names {
+    display: block;
+    cursor: pointer;
+    border-radius: 0.5%;
     text-decoration: none;
     color: White;
     font-size: 20px;
-    margin: 15px;
+    padding: 30px;
     font-family: 'bolgart';
-
 }
-
-.UserOptions
-{
-display: flex;
-width: 98%;
-justify-content: space-between;
-
+.UserOptions {
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
 }
-.SuspendUser
-{
+.SuspendUser {
     margin-left:10px;
     padding: 20px;
     margin-top: 20px;
     color: white;
     background-color: #3a3a3a;
 }
-.PromoteUser
-{
+.PromoteUser {
     margin-right:10px;
-   padding: 20px;
-   margin-top: 20px;
-   color: white;
-   background-color: #3a3a3a;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #3a3a3a;
 }
-
-.ForumOptions
-{
+.ForumOptions {
     display: flex;
     width: 100%;
     margin-top: 150px;
     justify-content: space-between;
     overflow: none;
 }
-
-.CreatePost
-{
+.CreatePost {
     margin-left:10px;
     padding: 50px;
     color: white;
     background-color: #3a3a3a;
 }
-.ModifyPost
-{
+.ModifyPost {
     padding: 50px;
     color: white;
     background-color: #3a3a3a;
 }
-.DeletePost
-{
+.DeletePost {
     margin-right:10px;
     padding: 50px;
     color: white;
     background-color: #3a3a3a;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.PanelTitle2 {
+    font-family: 'Bolgart', sans-serif;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.AdminBox2 {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    background-color: #0c0c0c;
+    margin-right: 50px;
+}
+.UserList2 {
+    text-align: center;
+    justify-content: center;
+    background-color: #3a3a3a;
+    width: 98%;
+    height: 30%;
+}
+.names2 {
+    display: block;
+    cursor: pointer;
+    border-radius: 0.5%;
+    text-decoration: none;
+    color: White;
+    font-size: 20px;
+    padding: 30px;
+    font-family: 'bolgart';
+}
+.UserOptions2 {
+    display: flex;
+    width: 98%;
+    justify-content: space-between;
+}
+.SuspendUser2 {
+    margin-left:10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.PromoteUser2 {
+    margin-right:10px;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.ForumOptions2 {
+    display: flex;
+    width: 100%;
+    margin-top: 150px;
+    justify-content: space-between;
+    overflow: none;
+}
+.CreatePost2 {
+    margin-left:10px;
+    padding: 50px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.ModifyPost2 {
+    padding: 50px;
+    color: white;
+    background-color: #3a3a3a;
+}
+.DeletePost2 {
+    margin-right:10px;
+    padding: 50px;
+    color: white;
+    background-color: #3a3a3a;
+}
+@media only screen and (max-width: 1400px) {
+    .ForumTitle {
+        margin-right: 100px;
+        font-size: 35px;
+        margin-bottom: 15%;
+   }
+}
+@media only screen and (max-width: 1400px) {
+    .ForumTitle {
+        margin-right: 70px;
+        font-size: 30px;
+        margin-bottom: 25%;
+   }
+}
+@media only screen and (max-width: 789px) {
+    .ForumTitle {
+        margin-left: 60px;
+        font-size: 25px;
+        margin-bottom: 25%;
+   }
+}
+@media only screen and (max-width: 640px) {
+    .ForumTitle {
+        margin-right: 100px;
+        font-size: 25px;
+        margin-bottom: 25%;
+   }
+}
 /*This is the forum.php title styling*/
-.fTitle 
-{
+.fTitle {
     display: flex;
     align-self: center;
     justify-content: center;
@@ -639,9 +558,7 @@ justify-content: space-between;
     font-size: 50px;
     font-family: sans-serif;
 }
-
-.ForumArea 
-{
+.ForumArea {
     display: flex;
     align-self: center;
     justify-content: center;
@@ -649,48 +566,78 @@ justify-content: space-between;
     margin-top: 1%;
     border: 10px solid #141414;
 }
-
-.card 
-{
+.card {
     display: flex;
     justify-content: center;
     background-color: black;
     width: 100%;
     height: 20%;
-
+    overflow: hidden;
 }
-
-.ForumIcon 
-{
-    display: flex;
-    margin-right: 92%;
+.ForumIcon {
     max-width: 100px;
     max-height: 100px;
-    overflow: hidden;
-
+    display: inline-block;
+    margin-right: 1250px;
 }
-
-.cardtitle 
-{
+@media only screen and (max-width: 1460px) {
+    .ForumIcon {
+        margin-right: 1050px;
+   }
+}
+@media only screen and (max-width: 1280px) {
+    .ForumIcon {
+        margin-right: 700px;
+   }
+}
+@media only screen and (max-width: 1000px) {
+    .ForumIcon {
+        max-width: 75px;
+        max-height: 75px;
+   }
+}
+@media only screen and (max-width: 900px) {
+    .ForumIcon {
+        margin-right: 500px;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .ForumIcon {
+        margin-right: 350px;
+        max-height: 40x;
+        max-width: 40x;
+   }
+}
+@media only screen and (max-width: 470px) {
+    .ForumIcon {
+        margin-right: 250px;
+   }
+}
+@media only screen and (max-width: 470px) {
+    .ForumIcon {
+        margin-right: 250px;
+   }
+}
+@media only screen and (max-width: 470px) {
+    .ForumIcon {
+        margin-right: 220px;
+        max-height: 60px;
+        max-width: 60px;
+   }
+}
+.cardtitle {
     display: flex;
     position: absolute;
     margin-top: 0.7%;
     color: white;
     font-size: 30px;
     font-family: sans-serif;
-
-
 }
-
-
-.searchbar 
-{
+.searchbar {
     display: flex;
     justify-content: center;
 }
-
-.results 
-{
+.results {
     display: flex;
     justify-content: center;
     margin-top: 15%;
@@ -698,62 +645,467 @@ justify-content: space-between;
     font-family: sans-serif;
     font-size: 50px;
 }
-
-
-@media only screen and (max-width: 1280px)
- {
-    .container 
-    {
+.fcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.fdetails {
+    margin-top: 21%;
+    margin-bottom: 5%;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    float: right;
+    margin-right: 100px;
+    font-family: sans-serif;
+    padding-left: 15px;
+}
+.left-side {
+    flex: 0 0 30%;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.left-side2 {
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.right-side {
+    flex: 0 0 70%;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+.fBody2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-radius: 15px;
+    overflow:hidden;
+}
+.fImage {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    max-width: 125px;
+    max-height: 125px;
+}
+.fBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-radius: 15px;
+}
+.Comment {
+    margin-top: 50px !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1440px;
+    margin:0 auto;
+}
+.CommentData {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 70px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.CommentTitle {
+    color: white;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-right: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.SubmitB {
+    margin-top: 10px !important;
+    max-width: 150px;
+    margin: 0 auto;
+}
+.SubmitB2 {
+    margin-top: 50px;
+    justify-content: center;
+    visibility: hidden;
+    overflow: hidden;
+}
+@media only screen and (max-width: 750px) {
+    .SubmitB2 {
+        visibility: visible;
+   }
+}
+@media only screen and (max-width: 500px) {
+    .fImage {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        max-width: 75px;
+        max-height: 75px;
+        justify-content: left;
+   }
+}
+@media only screen and (max-width: 240px) {
+    .fImage {
+        position: absolute;
+        margin-left: 75px;
+        margin-top: 4%;
+        margin-bottom: 5%;
+        max-width: 55px;
+        max-height: 55px;
+        justify-content: left;
+   }
+}
+@media only screen and (max-width: 700px) {
+    .results {
+        font-size: 35px;
+   }
+}
+@media only screen and (max-width: 400px) {
+    .results {
+        font-size: 20px;
+   }
+}
+.lastid {
+    justify-content: center;
+    margin-top: 15%;
+    color: white;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+.GoBack {
+    padding-left: 50px;
+}
+@media only screen and (max-width: 1280px) {
+    .container {
         width: 600px;
-    }
+   }
 }
-
-@media (max-width: 300px) 
-{
-    .container 
-    {
+@media (max-width: 300px) {
+    .container {
         width: 250px !important;
-    }
-
+   }
 }
 /*Forum Title font sizing*/
-@media only screen and (max-width: 1000px)
- {
-    .cardtitle
-    {
+@media only screen and (max-width: 1000px) {
+    .cardtitle {
         font-size:20px;
-    }
+   }
 }
 /*Forum Title font sizing*/
-@media only screen and (max-width: 700px)
- {
-    .cardtitle
-    {
-        font-size:10px;
-    }
+@media only screen and (max-width: 700px) {
+    .cardtitle {
+        font-size:15px;
+   }
+    .fBody2 {
+        flex-direction: column;
+        justify-content: center;
+   }
+    .left-side, .left-side2, .right-side {
+        margin: 0;
+        margin-bottom: 10px !important;
+   }
 }
-
-
-
-
 /*Forum Title font sizing*/
-@media only screen and (max-width: 1000px)
- {
-    .card
-    {
+@media only screen and (max-width: 350px) {
+    .fTitle {
+        font-size:15px;
+   }
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 500px) {
+    .fTitle {
+        font-size:20px;
+   }
+}
+@media only screen and (max-width: 500px) {
+    .fTitle {
+        font-size:20px;
+   }
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 1000px) {
+    .card {
         height: 30%;
-    }
+   }
 }
 /*Forum Title font sizing*/
-@media only screen and (max-width: 700px)
- {
-    .card
-    {
+@media only screen and (max-width: 700px) {
+    .card {
         height: 100%;
-        border: 2px  #141414;
-    }
+        border: 2px #141414;
+   }
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 500px) {
+    .card {
+        border: 2px #141414;
+   }
+}
+@media only screen and (max-width:500px) {
+    .searchbar {
+        font-size: 5px;
+   }
+}
+/*Forum Title font sizing*/
+@media only screen and (max-width: 700px) {
+    .ForumTitle {
+        font-size: 20px;
+   }
+}
+@media only screen and (max-width: 900px) {
+    .DeletePost {
+        margin-right:5px;
+        padding: 30px;
+   }
+}
+@media only screen and (max-width: 900px) {
+    .ModifyPost {
+        margin-right:5px;
+        padding: 30px;
+   }
+}
+@media only screen and (max-width: 900px) {
+    .CreatePost {
+        margin-right:5px;
+        padding: 30px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .DeletePost {
+        margin-right:5px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .ModifyPost {
+        margin-right:5px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .CreatePost {
+        margin-right:2px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .DeletePost2 {
+        margin-right:5px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .ModifyPost2 {
+        margin-right:5px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .CreatePost2 {
+        margin-right:2px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 420px) {
+    .DeletePost2 {
+        margin-right:5px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 420px) {
+    .ModifyPost2 {
+        margin-right:5px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 420px) {
+    .CreatePost2 {
+        margin-right:2px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 900px) {
+    .SuspendUser2 {
+        margin-right:5px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 900px) {
+    .PromoteUser {
+        margin-right:2px;
+        padding: 20px;
+   }
+}
+@media only screen and (max-width: 720px) {
+    .DeletePost {
+        margin-right:5px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 720px) {
+    .ModifyPost {
+        margin-right:5px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 720px) {
+    .CreatePost {
+        margin-right:2px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 700px) {
+    .SuspendUser {
+        margin-right:5px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 700px) {
+    .PromoteUser {
+        margin-right:2px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 650px) {
+    .names {
+        font-size: 15px;
+        padding: 10px;
+   }
+}
+@media only screen and (max-width: 820px) {
+    .PanelTitle {
+        font-size: 20px;
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .names {
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .UserList {
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .PromoteUser {
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .SuspendUser {
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .ModifyPost {
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .CreatePost {
+        overflow: hidden;
+        visibility: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .DeletePost {
+        overflow: hidden;
+        visibility: hidden;
+   }
+}
+@media only screen and (max-width: 750px) {
+    .ForumBox {
+        position: absolute;
+   }
+}
+@media only screen and (max-width: 1050px) {
+    .input {
+        font-size: 5px;
+   }
+}
+@media only screen and (max-width: 1050px) {
+    .testw {
+        padding-left: 20%;
+   }
 }
 
+@media only screen and (max-width: 790px) {
+    .images {
+        visibility: hidden;
+        overflow: hidden;
+   }
+}
 
+@media only screen and (max-width: 345px) {
+    .paragraph {
+        font-size: 20px;
+        flex: 1;
+        flex-wrap: wrap;
+        margin-right: 60px;
+   }
+}
+@media only screen and (max-width: 322px) {
+    .paragraph {
+        font-size: 15px;
+        flex: 1;
+        flex-wrap: wrap;
+        margin-right: 120px;
+   }
+}
+@media only screen and (max-width: 300px) {
+    .indextitle {
+        font-size: 30px;
+        margin-right: 150px;
+        margin-top: 1%;
+   }
+}
+@media only screen and (max-width: 450px) {
+    .indextitle {
+        font-size: 39px;
+        margin-right: 60px;
+        margin-top: 2%;
+   }
+}
 
+@media only screen and (max-width: 450px) {
+    .ContactANDLocation {
+        font-size: 15px;
+   }
+}
 /*--------------------END OF THE BODY--------------------*/
